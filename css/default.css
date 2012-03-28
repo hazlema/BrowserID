@@ -1,6 +1,6 @@
 body
 {
-    font-family: Verdana;
+    font-family: Ariel;
     font-size: 15px;
     color: black;
     margin: 0;
@@ -16,9 +16,12 @@ form, h1, h2, h3, h4, input
 
 .head {
     background-color:black;
-    color: white;
-    padding: 10px;
-    border-bottom:1px solid gray;
+	background-image: url('../gfx/backg.jpg');
+	background-repeat: repeat-x;
+	height:36px;
+	line-height:36px;
+	padding-right:10px;
+	color: white;
     text-align:right;
 }
 

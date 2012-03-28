@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>BrowserID Test</title>
-    <script type="text/javascript" src="js/moo.js"></script>
+# BrowserID 
+
+## Requires:
+* MooTools 
+* PHP
+
+This is a drop-in class to support BrowserID.  It handles everything
+for you, all you need to tell it is the name of the login element and the path to the waiting graphic of your choice.
+
+## Example
+
     <script type="text/javascript" src="js/browserid.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
+
     <script type="text/javascript">
         window.addEvent('domready', function(){
             new BrowserID({
@@ -13,11 +18,8 @@
                 waitImage:    'gfx/wait16.gif'
             });
         });
-    </script>
-</head>
-<body>
+    </script>   
+
     <div class="head">
         <span id="login">&nbsp;</span>
     </div>
-</body>
-</html>
