@@ -1,0 +1,31 @@
+body 
+{
+	font-family: Verdana;
+	font-size: 15px;
+	color: black;
+	margin: 0;
+	padding: 0;
+	background: #FFF;
+}
+
+form, h1, h2, h3, h4, input
+{
+		padding:0;
+		margin:0;
+}
+
+.head {
+	background-color:black;
+	color: white;
+	padding: 10px;
+	border-bottom:1px solid gray;
+}
+
+.head span {
+	background-color:black;
+	color: yellow;
+	border-bottom:1px dashed green;
+	font-weight: bolder;
+	cursor: pointer;
+}
+	
