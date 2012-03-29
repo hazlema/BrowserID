@@ -6,7 +6,8 @@ BrowserID = new Class({
 
     options:{
         loginElement: document.id('login'),
-        waitImage:    'gfx/wait16.gif'
+        waitImage:    'gfx/wait16.gif',
+        loginText:	  'BrowserID Login'
     },
 
     initialize: function(options){
@@ -14,6 +15,7 @@ BrowserID = new Class({
 
         this.loginData = null;
         this.loggedIn  = false;
+        this.Tip       = null;
         this.initializeEvents();
         this.isReturnVisitor();
     },
@@ -52,29 +54,35 @@ BrowserID = new Class({
     /* Change the visual status */
     setStatus: function(status, txt){
         var content = '',
-            css     = '';
+            css     = '',
+            tooltip = '';
 
         switch (status){
             case 'wait':
                 content  = '<img src="' + this.options.waitImage + '">';
                 css      = 'browserid-image';
+                tooltip  = 'Please Wait...';
                 this.loggedIn = false;
                 break;
 
             case 'login':
-                content  = 'BrowserID Login';
+                content  = this.options.loginText;
                 css      = 'browserid-login';
+                tooltip  = 'Click to login';
                 this.loggedIn = false;
                 break;
 
             case 'logout':
                 content  = txt;
                 css      = 'browserid-logout';
+                tooltip  = 'Click to logout';
                 this.loggedIn = true;
                 break;
         }
 
-        this.options.loginElement.set('class', css).set('html', content);
+        
+        
+        this.options.loginElement.set('class', css).set('title', tooltip).set('html', content);
     },
 
     /* Validate users assertion with browserid.org */
