@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BrowserID Test</title>
-    <script type="text/javascript" src="js/moo.js"></script>
-    <script type="text/javascript" src="js/browserid.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/default.css">
-    <script type="text/javascript">
-        window.addEvent('domready', function(){
-            new BrowserID({
-                loginElement: document.id('login'),
-                loginText:    'Click Here to Login',
-                waitImage:    'gfx/wait.gif'
-                
+      <title>BrowserID Test</title>
+      <script type="text/javascript" src="js/moo.js"></script>
+      <script type="text/javascript" src="js/browserid.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/default.css">
+      <script type="text/javascript">
+            window.addEvent('domready', function(){
+                  new BrowserID({
+                        loginElement: document.id('login'),
+                        loginText:    'Click Here to Login',
+                        waitImage:    'gfx/wait.gif'
+                  });
             });
-        });
     </script>
 </head>
 <body>
-    <div class="head">
-	    <div class="head-content">
-	    	<ul>
-	    		<li>Logo Here</li>
-	    		<li>Option</li>
-	    		<li>Option</li>
- 	    		<li>Option</li>
- 	    	</ul>
-	        <div id="login">&nbsp;</div>
-	    </div>
+      <div class="head">
+            <div class="head-content">
+                  <ul>
+                        <li>Logo Here</li>
+                        <li>Option</li>
+                        <li>Option</li>
+                        <li>Option</li>
+                  </ul>
+                  <div id="login">&nbsp;</div>
+          </div>
     </div>
     <br><br>
     <strong>BrowserID, with Mootools and PHP Demo</strong>
     <ul>
-    	<li>To see this demo in jsfiddle, please go to <a href="http://jsfiddle.net/hazlema/y9LV4/">http://jsfiddle.net/hazlema/y9LV4/</a></li>
-    	<li>To download the source, please go to <a href="https://github.com/hazlema/BrowserID">GitHub</a></li>
+      <li>To see this demo in jsfiddle, please go to <a href="http://jsfiddle.net/hazlema/y9LV4/">http://jsfiddle.net/hazlema/y9LV4/</a></li>
+      <li>To download the source, please go to <a href="https://github.com/hazlema/BrowserID">GitHub</a></li>
     </ul>
 </body>
 </html>
