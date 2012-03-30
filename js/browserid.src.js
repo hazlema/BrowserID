@@ -66,7 +66,7 @@ BrowserID = new Class({
                   } else {
                         this.setStatus('wait');
                         window.navigator.id.get(function(assertion){
-                              if (assertion) this.isValid(assertion)
+                              if (assertion) this.isValid(assertion);
                               else this.setStatus('login');
                         }.bind(this), {allowPersistent:true});
                   }
@@ -79,7 +79,7 @@ BrowserID = new Class({
       isPersistent: function(){
             this.setStatus('wait');
             window.navigator.id.get(function(assertion){
-                  if (assertion) this.isValid(assertion)
+                  if (assertion) this.isValid(assertion);
                   else this.setStatus('login');
             }.bind(this), {silent:true});
       },
